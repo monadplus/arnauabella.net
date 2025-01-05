@@ -1,0 +1,41 @@
+base_url = "https://arnauabella.net"
+title = "arnauabella.net"
+
+build_search_index = true
+compile_sass = false
+generate_feeds = false
+default_language = "en"
+
+theme = "apollo"
+taxonomies = [{ name = "tags" }]
+
+[markdown]
+highlight_code = true
+highlight_theme = "ayu-light"
+
+[slugify]
+paths = "safe"
+anchors = "on"
+
+[extra]
+use_cdn = false
+theme = "toggle"
+
+socials = [
+  { name = "twitter", url = "https://twitter.com/monadplus", icon = "twitter" },
+  { name = "github", url = "https://github.com/monadplus", icon = "github" },
+  { name = "mail", url = "mailto:arnau.abella@monadplus.pro", icon = "email" },
+  { name = "cv", url = "cv.pdf", icon = "cv" },
+]
+
+menu = [
+  { name = "/posts", url = "/posts", weight = 1 },
+  { name = "/tags", url = "/tags", weight = 2 },
+  { name = "/projects", url = "/projects", weight = 3 },
+  { name = "/about", url = "/about", weight = 4 },
+]
+
+mathjax = true
+mathjax_dollar_inline_enable = true
+fancy_code = true
+dynamic_note = true
