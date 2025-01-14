@@ -10,4 +10,4 @@ services:
     volumes:
       - "$PWD:/app:r"
     restart: always
-    command: serve --interface 0.0.0.0 --port 8080 --base-url localhost
+    command: serve --interface 0.0.0.0 --port 8080 --base-url /
