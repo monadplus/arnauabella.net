@@ -39,3 +39,5 @@ mathjax = true
 mathjax_dollar_inline_enable = true
 fancy_code = true
 dynamic_note = true
+
+favicon = "/icon/favicon.ico"
