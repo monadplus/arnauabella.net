@@ -25,7 +25,7 @@ socials = [
   # { name = "twitter", url = "https://twitter.com/monadplus", icon = "twitter" },
   { name = "github", url = "https://github.com/monadplus", icon = "github" },
   { name = "mail", url = "mailto:arnau.abella@monadplus.pro", icon = "email" },
-  { name = "cv", url = "cv.pdf", icon = "cv" },
+  { name = "cv", url = "/cv.pdf", icon = "cv" },
 ]
 
 menu = [
