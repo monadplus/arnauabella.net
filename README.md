@@ -1,7 +1,35 @@
 # arnauabella.net
 
-```sh
-$ docker run -u "$(id -u):$(id -g)" -v $PWD:/app --workdir /app -p 8080:8080 ghcr.io/getzola/zola:v0.19.1 serve --interface 0.0.0.0 --port 8080 --base-url localhost
+## Run With Docker Compose
 
-$ docker compose up --detach
+Start the site in the background:
+
+```sh
+docker compose up -d
+```
+
+Restart the Zola container:
+
+```sh
+docker compose restart zola-server
+```
+
+To update Zola, change the `image` tag in `docker-compose.yaml` to the desired
+release, then pull the image and recreate the container:
+
+```sh
+docker compose pull zola-server
+docker compose up -d --force-recreate --no-build zola-server
+```
+
+Show live logs:
+
+```sh
+docker compose logs -f zola-server
+```
+
+Show the last 100 log lines:
+
+```sh
+docker compose logs --tail=100 zola-server
 ```
