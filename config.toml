@@ -41,3 +41,10 @@ fancy_code = true
 dynamic_note = true
 
 favicon = "/icon/favicon.ico"
+
+[extra.analytics]
+enabled = true
+
+[extra.analytics.umami]
+website_id = "29e32f25-6969-455b-a7b8-8b5a19b3aa87"
+host_url = "https://analytics.arnauabella.net"
