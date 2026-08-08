@@ -1,0 +1,142 @@
+.thoughts {
+  max-width: 46rem;
+  margin: 3.5rem auto 0;
+}
+
+.thoughts-intro,
+.thought-entry-header {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1.75rem;
+}
+
+.thoughts-kicker {
+  color: var(--primary-color);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+}
+
+.thoughts h1,
+.thoughts h2 {
+  font-family: var(--header-font);
+}
+
+.thoughts h1::before,
+.thoughts h2::before {
+  content: none;
+}
+
+.thoughts h1 {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+  margin: 0;
+}
+
+.thoughts-intro > p:last-child {
+  color: var(--text-1);
+  font-size: 1.05rem;
+  margin: 1.25rem 0 0;
+}
+
+.thought-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.thought-list > li {
+  border-bottom: 1px solid var(--border-color);
+  padding: 1.6rem 0;
+}
+
+.thought-card {
+  display: grid;
+  gap: 0.5rem 2rem;
+  grid-template-columns: 8.25rem minmax(0, 1fr);
+}
+
+.thought-card time,
+.thought-entry-header time {
+  color: var(--text-1);
+  font-size: 0.85rem;
+}
+
+.thought-card h2 {
+  font-size: 1.35rem;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.thought-card h2 a,
+.thought-back {
+  border-bottom: 0;
+}
+
+.thought-card h2 a:hover,
+.thought-back:hover {
+  background: transparent;
+  color: var(--primary-color);
+}
+
+.thought-card p {
+  color: var(--text-1);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin: 0.65rem 0 0;
+}
+
+.thoughts-empty {
+  color: var(--text-1);
+  margin: 2rem 0;
+}
+
+.thought-pagination {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.thought-entry {
+  margin-top: 2.5rem;
+}
+
+.thought-back {
+  color: var(--text-1);
+  font-size: 0.85rem;
+}
+
+.thought-back::before {
+  content: "<- ";
+}
+
+.thought-entry-header {
+  margin-top: 2rem;
+}
+
+.thought-entry-header time {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.thought-entry .body {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin-top: 2rem;
+}
+
+.thought-entry .body > :first-child {
+  margin-top: 0;
+}
+
+@media (max-width: 640px) {
+  .thoughts {
+    margin-top: 2rem;
+  }
+
+  .thought-card {
+    grid-template-columns: 1fr;
+  }
+}

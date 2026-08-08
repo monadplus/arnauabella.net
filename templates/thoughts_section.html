@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<main class="thoughts">
+    <header class="thoughts-intro">
+        <p class="thoughts-kicker">Daily notebook</p>
+        <h1>{{ section.title }}<span class="primary-color">.</span></h1>
+        <p>A small record of things noticed, learned, and worth keeping.</p>
+    </header>
+
+    {% if paginator %}
+        {% set pages = paginator.pages %}
+    {% else %}
+        {% set pages = section.pages %}
+    {% endif %}
+
+    {% if pages %}
+    <ol class="thought-list">
+        {% for page in pages %}
+        <li>
+            <article class="thought-card">
+                <time datetime="{{ page.date | date(format='%Y-%m-%d') }}">{{ page.date | date(format="%d %b %Y") }}</time>
+                <div>
+                    <h2><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h2>
+                    {% if page.description %}
+                    <p>{{ page.description }}</p>
+                    {% elif page.summary %}
+                    <p>{{ page.summary | striptags | safe }}</p>
+                    {% endif %}
+                </div>
+            </article>
+        </li>
+        {% endfor %}
+    </ol>
+    {% else %}
+    <p class="thoughts-empty">No entries yet.</p>
+    {% endif %}
+
+    {% if paginator %}
+    <nav class="thought-pagination" aria-label="Thought pages">
+        {% if paginator.previous %}
+        <a href="{{ paginator.previous }}">Newer</a>
+        {% endif %}
+        {% if paginator.next %}
+        <a href="{{ paginator.next }}">Older</a>
+        {% endif %}
+    </nav>
+    {% endif %}
+</main>
+{% endblock main_content %}

@@ -39,6 +39,7 @@ mathjax = true
 mathjax_dollar_inline_enable = true
 fancy_code = true
 dynamic_note = true
+stylesheets = ["thoughts.css"]
 
 favicon = "/icon/favicon.ico"
 

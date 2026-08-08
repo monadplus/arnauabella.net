@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<main class="thoughts thought-entry">
+    <a class="thought-back" href="{{ get_url(path='thoughts') }}">All thoughts</a>
+    <article>
+        <header class="thought-entry-header">
+            <p class="thoughts-kicker">Daily note</p>
+            <time datetime="{{ page.date | date(format='%Y-%m-%d') }}">{{ page.date | date(format="%A, %d %B %Y") }}</time>
+            <h1>{{ page.title }}<span class="primary-color">.</span></h1>
+        </header>
+        <section class="body">
+            {{ page.content | safe }}
+        </section>
+    </article>
+</main>
+{% endblock main_content %}
